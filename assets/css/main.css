@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('AvenirLTPro-Book.woff2') format('woff2'),
+    url('AvenirLTPro-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('AvenirLTPro-Black.woff2') format('woff2'),
+    url('AvenirLTPro-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('AvenirLTPro-Roman.woff2') format('woff2'),
+    url('AvenirLTPro-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('AvenirLTPro-Light.woff2') format('woff2'),
+    url('AvenirLTPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('AvenirLTPro-Medium.woff2') format('woff2'),
+    url('AvenirLTPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('AvenirLTPro-Heavy.woff2') format('woff2'),
+    url('AvenirLTPro-Heavy.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Fonts */
+  --font-kumbh-sans: 'Kumbh Sans', serif;
+  --font-avenir: 'Avenir LT Pro', serif;
+
+  /* Colors */
+  --color-*: initial;
+  --color-green: #07b972;
+  --color-light-green: #00ff1a;
+  --color-red: #f00;
+  --color-yellow: #ffd600;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-50: #eeeeee;
+
+  /* Font Sizes */
+  --text-heading: 0.75rem;
+
+  /* Breakpoints */
+  --breakpoint-xsm: 575px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1440px;
+  --breakpoint-full: 100%;
+
+  /* Shadows */
+  --shadow-common: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  /* Animations */
+  --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* ===== Customized base CSS Start ===== */
+@layer base {
+  body {
+    @apply font-kumbh-sans text-sm text-black leading-[1.29];
+  }
+}
+/* ===== Customized base CSS End ===== */
+
+/* ===== Customized components CSS Start ===== */
+@layer components {
+  .body__overlay {
+    @apply -z-40 opacity-0 invisible;
+  }
+  .body__overlay.active {
+    @apply z-40 opacity-50 visible;
+  }
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* ===== Customized components CSS End ===== */
+
+/* ===== Customized utilities CSS Start ===== */
+@layer utilities {
+  .container {
+    @apply mx-auto p-[0_16px] sm:p-[0_12px];
+  }
+  .transition-all {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  /* backrounds-css */
+  .body-bg {
+    background-color: #fafafa;
+  }
+
+  /* gradients css */
+  .gradient-primary {
+    background-image: linear-gradient(165deg, #fe3279 4.95%, #ffce76 95.73%);
+  }
+  .gradient-primary-light {
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 0, 0, 0.08) 0%,
+      rgba(255, 0, 0, 0.08) 100%
+    );
+  }
+  .gradient-secondary {
+    background-image: linear-gradient(90deg, #0cd37f 0%, #009560 100%);
+  }
+  .gradient-secondary-light {
+    background-image: linear-gradient(
+      0deg,
+      rgba(1, 188, 42, 0.1) 0%,
+      rgba(1, 188, 42, 0.1) 100%
+    );
+  }
+}
+/* ===== Customized utilities CSS End ===== */
+
+/* ===== Custom CSS Start ===== */
+/* ===== Custom CSS End ===== */

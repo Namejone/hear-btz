@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HeartBtz</title>
+
+	<!-- fav-icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/fav/favicon-16x16.png">
+	<link rel="manifest" href="assets/imgs/fav/site.webmanifest">
+	<!-- fav-icon--end -->
+
+	<!-- CSS Stylesheets -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body class="body-bg">
+
+	<!-- ===== Body Overlay Stay ===== -->
+	<!-- <div id="bodyOverlay" class="body__overlay fixed top-0 left-0 w-full h-full bg-black transition-all"></div> -->
+	<!-- ===== Body Overlay End ===== -->
+
+	<!-- root -->
+	<div class="root group">
+
+		<!-- sidebar -->
+		<aside
+			class="sidebar px-5 py-12 fixed -left-51 top-0 w-51 border-r border-gray-50 lg:left-0 group-[.show]:w-20 transition-all">
+
+			<!-- sidebar-collaps-btn -->
+			<button type="button"
+				class="sidebar-collapse w-10 h-10 border border-gray-50 rounded-full inline-flex items-center justify-center absolute -right-5 top-29 bg-white cursor-pointer">
+
+				<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_5457_601)">
+						<path d="M11 3.9375V19.0625" stroke="#D6D6D6" stroke-width="1.375" stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path d="M1.375 11.5H8.25" stroke="#D6D6D6" stroke-width="1.375" stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path d="M5.5 8.75L8.25 11.5L5.5 14.25" stroke="#D6D6D6" stroke-width="1.375" stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path d="M20.625 11.5H13.75" stroke="#D6D6D6" stroke-width="1.375" stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path d="M16.5 14.25L13.75 11.5L16.5 8.75" stroke="#D6D6D6" stroke-width="1.375" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</g>
+					<defs>
+						<clipPath id="clip0_5457_601">
+							<rect width="22" height="22" fill="white" transform="translate(0 0.5)" />
+						</clipPath>
+					</defs>
+				</svg>
+
+			</button>
+			<!-- sidebar-collaps-btn--end -->
+			<div class="h-screen overflow-y-auto scrollbar-hidden">
+
+				<!-- logo -->
+				<div class="mb-[50px]">
+					<a href="index.html" class="logo flex items-end justify-center gap-1">
+						<span class="icon">
+							<img src="assets/imgs/main-icon.svg" alt="logo-icon">
+						</span>
+						<span class="text group-[.show]:w-0 group-[.show]:opacity-0">
+							<img src="assets/imgs/heartBtz.svg" alt="logo-text">
+						</span>
+					</a>
+				</div>
+				<!-- logo--end -->
+
+				<!-- navbar -->
+				<nav class="mb-20">
+					<ul class="space-y-7">
+
+						<li
+							class="relative group after:absolute after:left-[7px] after:-bottom-[13px] after:w-[23px] after:h-[1px] after:bg-gray-50">
+							<a href="#" class="flex items-center gap-3 active group-[.show]:gap-0">
+								<span
+									class="icon w-8 h-8 flex items-center justify-center relative rounded-full gradient-primary flex-initial">
+									<span class="w-[5px] h-[5px] rounded-full gradient-primary  absolute top-0.5 right-0.5 hidden"></span>
+
+									<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_5457_480)">
+											<path
+												d="M8.5 10.625C10.8472 10.625 12.75 8.72221 12.75 6.375C12.75 4.02779 10.8472 2.125 8.5 2.125C6.15279 2.125 4.25 4.02779 4.25 6.375C4.25 8.72221 6.15279 10.625 8.5 10.625Z"
+												stroke="white" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"
+												class="stroke-white" />
+											<path
+												d="M2.125 14.3438C3.41129 12.1211 5.74746 10.625 8.5 10.625C11.2525 10.625 13.5887 12.1211 14.875 14.3438"
+												stroke="white" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"
+												class="stroke-white" />
+										</g>
+										<defs>
+											<clipPath id="clip0_5457_480">
+												<rect width="17" height="17" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+								</span>
+								<span
+									class="text text-black font-bold text-[15px] leading-[18.5px] px-[15px] py-[7px] rounded-4xl bg-[#FFE9D5] group-[.show]:opacity-0 group-[.show]:w-0 group-[.show]:hidden group-[.show]:p-0 transition-[.4s] text-nowrap">
+									My Profile
+								</span>
+							</a>
+						</li>
+						<li
+							class="relative after:absolute after:left-[7px] after:-bottom-[13px] after:w-[23px] after:h-[1px] after:bg-gray-50 group">
+							<a href="" class="flex items-center gap-3 group-[.show]:gap-0">
+								<span class="icon w-8 h-8 flex items-center justify-center relative rounded-full flex-initial">
+									<span class="w-[5px] h-[5px] rounded-full gradient-primary absolute top-0.5 right-0.5"></span>
+									<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.99238 16.8567C7.88279 17.8901 10.1066 18.2388 12.2491 17.838C14.3917 17.4371 16.3068 16.314 17.6374 14.678C18.9679 13.042 19.6232 11.0049 19.4809 8.94631C19.3386 6.88775 18.4085 4.94832 16.8641 3.4896C15.3196 2.03088 13.2662 1.15244 11.0866 1.01806C8.90708 0.883684 6.75016 1.50253 5.01803 2.75924C3.28589 4.01594 2.09676 5.82471 1.67235 7.84833C1.24793 9.87195 1.61719 11.9723 2.71128 13.7578L1.53852 17.0648C1.49445 17.1896 1.48806 17.3235 1.52005 17.4516C1.55204 17.5796 1.62116 17.6967 1.71966 17.7897C1.81816 17.8828 1.94214 17.948 2.07771 17.9783C2.21328 18.0085 2.35509 18.0024 2.48723 17.9608L5.99238 16.8567Z"
+											stroke="black" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span
+									class="text text-black font-light text-[15px] leading-[18.5px] px-[15px] py-[7px] rounded-4xl group-[.show]:opacity-0 group-[.show]:w-0 group-[.show]:hidden group-[.show]:p-0 transition-[.4s] text-nowrap">
+									Messages
+								</span>
+							</a>
+						</li>
+						<!-- <li
+							class="relative after:absolute after:left-[7px] after:-bottom-[13px] after:w-[23px] after:h-[1px] after:bg-gray-50">
+							<a href="" class="flex items-center gap-3">
+								<span class="icon w-8 h-8 flex items-center justify-center relative rounded-full">
+									<span class="w-[5px] h-[5px] rounded-full gradient-primary absolute top-0.5 right-0.5"></span>
+
+									<svg width="27" height="29" viewBox="0 0 27 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<ellipse cx="24.5" cy="3.14138" rx="2.5" ry="2.50003" fill="url(#paint0_linear_5457_503)" />
+										<g clip-path="url(#clip0_5457_503)">
+											<path d="M11.009 11.0608H15.9512" stroke="black" stroke-width="1.6474" stroke-linecap="round"
+												stroke-linejoin="round" />
+											<path
+												d="M23.9393 17.8892L19.445 7.66293C18.9816 7.19954 18.3531 6.93921 17.6977 6.93921C17.0424 6.93921 16.4139 7.19954 15.9504 7.66293V19.2978"
+												stroke="black" stroke-width="1.6474" stroke-linecap="round" stroke-linejoin="round" />
+											<path
+												d="M11.0096 19.2978V7.66293C10.5462 7.19954 9.91767 6.93921 9.26232 6.93921C8.60697 6.93921 7.97847 7.19954 7.51505 7.66293L3.02075 17.8892"
+												stroke="black" stroke-width="1.6474" stroke-linecap="round" stroke-linejoin="round" />
+											<path
+												d="M6.88924 23.4163C9.16382 23.4163 11.0077 21.5723 11.0077 19.2977C11.0077 17.0231 9.16382 15.1792 6.88924 15.1792C4.61466 15.1792 2.77075 17.0231 2.77075 19.2977C2.77075 21.5723 4.61466 23.4163 6.88924 23.4163Z"
+												stroke="black" stroke-width="1.6474" stroke-linecap="round" stroke-linejoin="round" />
+											<path
+												d="M20.0689 23.4164C22.3435 23.4164 24.1874 21.5725 24.1874 19.2979C24.1874 17.0233 22.3435 15.1793 20.0689 15.1793C17.7943 15.1793 15.9504 17.0233 15.9504 19.2979C15.9504 21.5725 17.7943 23.4164 20.0689 23.4164Z"
+												stroke="black" stroke-width="1.6474" stroke-linecap="round" stroke-linejoin="round" />
+										</g>
+										<defs>
+											<linearGradient id="paint0_linear_5457_503" x1="22" y1="1.06819" x2="26.5732" y2="5.64136"
+												gradientUnits="userSpaceOnUse">
+												<stop offset="0.00745959" stop-color="#FE3279" />
+												<stop offset="1" stop-color="#FFCE76" />
+											</linearGradient>
+											<clipPath id="clip0_5457_503">
+												<rect width="26.3583" height="26.3586" fill="white" transform="translate(0.300049 2)" />
+											</clipPath>
+										</defs>
+									</svg>
+
+								</span>
+								<span class="text text-black font-light text-[15px] leading-[18.5px] px-[15px] py-[7px] rounded-4xl">
+									Interactions
+								</span>
+							</a>
+						</li>
+						<li
+							class="relative after:absolute after:left-[7px] after:-bottom-[13px] after:w-[23px] after:h-[1px] after:bg-gray-50">
+							<a href="" class="flex items-center gap-3">
+								<span class="icon w-8 h-8 flex items-center justify-center relative rounded-full">
+									<span class="w-[5px] h-[5px] rounded-full gradient-primary absolute top-0.5 right-0.5"></span>
+
+									<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<ellipse cx="24.5" cy="3.14138" rx="2.5" ry="2.50003" fill="url(#paint0_linear_5457_520)" />
+										<path d="M19.5591 7.94214L26.1487 22.7689H12.9695L19.5591 7.94214Z" stroke="black"
+											stroke-width="1.6474" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M12.969 22.7689H1.43725L8.02683 7.94214H19.5586V22.7689" stroke="black"
+											stroke-width="1.6474" stroke-linecap="round" stroke-linejoin="round" />
+										<defs>
+											<linearGradient id="paint0_linear_5457_520" x1="22" y1="1.06819" x2="26.5732" y2="5.64136"
+												gradientUnits="userSpaceOnUse">
+												<stop offset="0.00745959" stop-color="#FE3279" />
+												<stop offset="1" stop-color="#FFCE76" />
+											</linearGradient>
+										</defs>
+									</svg>
+
+
+								</span>
+								<span class="text text-black font-light text-[15px] leading-[18.5px] px-[15px] py-[7px] rounded-4xl">
+									Travel Feed
+								</span>
+							</a>
+						</li> -->
+					</ul>
+				</nav>
+				<!-- navbar--end -->
+
+				<!-- sign-out -->
+				<div class="sign-out">
+					<button type="button" class="flex items-center gap-[27px]	group-[.show]:justify-center">
+						<span class="w-[30px] h-[30px] rounded-full border border-white inline-block img">
+							<img src="assets/imgs/sidebar/avatar.png" class="w-full h-full object-cover object-center"
+								alt="avatar-img">
+						</span>
+						<span
+							class="text text-black text-[15px] leading-[18.6px] font-light group-[.show]:w-0 group-[.show]:opacity-0 group-[.show]:hidden transition-all">
+							Sign Out
+						</span>
+					</button>
+				</div>
+				<!-- sign-out--end -->
+
+				<hr class="my-[14px] border-gray-50">
+
+				<!-- premium -->
+				<div class="premium flex flex-col justify-center items-center">
+					<span class="icon">
+						<img src="assets/imgs/sidebar/premium.svg" class="max-w-full" alt="premium-icon">
+					</span>
+					<span
+						class="text bg-clip-text text-transparent gradient-primary text-[22px] font-medium leading-[27px] group-[.show]:opacity-0 group-[.show]:w-0 group-[.show]:hidden transition-all delay-500 text-nowrap">
+						Premium Plan
+					</span>
+				</div>
+				<!-- premium--end -->
+
+			</div>
+
+		</aside>
+		<!-- sidebar--end -->
+
+		<!-- main-content -->
+		<main class="content max-w-full ms-0 lg:ps-6 lg:py-9 lg:pe-9 lg:ms-51 px-4 group-[.show]:ms-20 transition-all">
+			<div class="content__inner  h-screen bg-white lg:rounded-2xl">
+
+				<!-- dami -->
+				<div class="container">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, repellendus itaque? Accusamus corporis
+						deleniti ex ratione earum laborum, expedita, culpa ipsum vitae voluptatum quidem nulla veritatis temporibus
+						asperiores impedit, aspernatur neque. Dolores, expedita cum quas pariatur eveniet quasi ipsum! Ab dolorum
+						similique voluptates. Odio aliquam a veniam saepe dolore exercitationem rerum harum facere quia vitae,
+						libero ipsum. Nemo quasi exercitationem nulla suscipit similique nihil nisi inventore! Perferendis non nulla
+						ullam tempora ut, quam ex. Distinctio inventore repudiandae magnam ab id modi qui cupiditate recusandae
+						doloremque nostrum quisquam tempora atque quasi vero facilis incidunt nihil ratione architecto corporis
+						sint, illo suscipit cumque excepturi! Expedita alias nihil libero cupiditate eum ex officiis, esse
+						explicabo, rerum commodi dolore optio at, totam perferendis recusandae amet. Earum, asperiores sapiente
+						corporis consequatur, delectus non commodi, iure ut autem odit pariatur beatae nobis rerum. Maiores sunt
+						vitae, doloremque eos quibusdam harum nesciunt eum tempore officiis necessitatibus debitis inventore omnis
+						ut hic, quam voluptas minus enim? Iusto, libero nulla, facere ullam deleniti quis iste illo voluptatum
+						placeat explicabo veniam, minus est accusamus. Dicta a eaque incidunt asperiores, laboriosam, omnis
+						assumenda pariatur vero consequuntur maxime, at sunt facilis ducimus dolorum eum nesciunt consequatur quas
+						minus? Dolor voluptatibus, ad magnam quis dolores rerum voluptas itaque quaerat porro possimus saepe facere
+						vero laudantium, quisquam quo. Blanditiis, tempora ipsa! Nulla harum voluptates aspernatur officiis, nostrum
+						eveniet laboriosam? Cum nobis saepe et in ad beatae, soluta optio distinctio quod incidunt sint nostrum
+						eligendi eaque obcaecati dicta velit quo eos. Esse ipsam vitae sit ea ut, odit exercitationem hic corporis
+						quidem eligendi dolorum asperiores, enim molestias consequuntur repellat officia distinctio aperiam velit.
+						Deserunt obcaecati aperiam id amet assumenda aliquid modi quam, impedit quia, ea fugit velit incidunt
+						dignissimos accusantium unde ducimus. Tenetur sint libero exercitationem? Sapiente similique fugit aliquam,
+						quos hic illum at. Reiciendis?</p>
+				</div>
+				<!-- dami--end -->
+
+
+			</div>
+		</main>
+		<!-- main-content--end -->
+
+
+	</div>
+	<!-- root--end -->
+
+
+	<!-- JS Scripts -->
+	<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
