@@ -14,6 +14,7 @@
 	<!-- fav-icon--end -->
 
 	<!-- CSS Stylesheets -->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 	<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -33,7 +34,7 @@
 
 			<!-- sidebar-collaps-btn -->
 			<button type="button"
-				class="sidebar-collapse w-10 h-10 border border-gray-50 rounded-full inline-flex items-center justify-center absolute -right-5 top-29 bg-white cursor-pointer">
+				class="sidebar-collapse hidden xl:inline-flex w-10 h-10 border border-gray-50 rounded-full items-center justify-center absolute -right-5 top-29 bg-white cursor-pointer">
 
 				<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_5457_601)">
@@ -360,16 +361,30 @@
 		<!-- sidebar--end -->
 
 		<!-- main-content -->
-		<main class="content max-w-full ms-0 lg:ps-6 lg:py-9 lg:pe-9 lg:ms-51 px-4 group-[.show]:ms-20 transition-all">
-			<div class="content__inner flex justify-between gap-7">
+		<main class="content max-w-full ms-0 lg:ps-6 lg:py-9 lg:pe-9 lg:ms-51 md:px-4 group-[.show]:ms-20 transition-all">
+			<div class="content__inner flex justify-between gap-7 flex-wrap lg:flex-nowrap">
 
 				<!-- content -->
-				<div class="w-full bg-white rounded-2xl px-[26px] py-4">
+				<div class="w-full bg-white rounded-2xl px-3 md:px-[26px] py-4">
+
+					<!-- mobile-page-header -->
+					<div class="flex justify-between items-center xl:hidden mb-4">
+						<!-- logo -->
+						<a href="index.html">
+							<img src="assets/imgs/main-icon.svg" class="max-w-full" alt="logo-icon">
+						</a>
+						<!-- logo--end -->
+
+						<button type="button" class="w-9 h-9 rounded-sm gradient-primary">
+							<i class="ri-menu-2-line text-xl text-white"></i>
+						</button>
+					</div>
+					<!-- mobile-page-header--end -->
 
 					<!-- page-hero -->
 					<div class="flex justify-between items-center mb-2">
 
-						<h1 class="text-black text-[25px] leading-[31px] font-bold flex items-center gap-2">
+						<h1 class="fs-1 font-bold flex items-center gap-2">
 							My Profile
 							<span class="px-2 cursor-pointer py-1 inline-block">
 								<svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -386,8 +401,7 @@
 							</span>
 						</h1>
 
-						<a href=""
-							class="px-10 py-[10px] border border-gray-50 rounded-4xl text-black/60 font-semibold text-[15px] inline-block hover:bg-green hover:text-white transition-all duration-300">
+						<a href="" class="btn btn-outline px-10 py-[10px]">
 							Follow
 						</a>
 
@@ -395,7 +409,7 @@
 					<!-- page-hero--end -->
 
 					<!-- tab-nav -->
-					<div class="border-b border-gray-50">
+					<div class="border-b border-gray-50 mb-6">
 						<ul class="flex items-center gap-7">
 							<li class="group active">
 								<a href=""
@@ -485,6 +499,313 @@
 					</div>
 					<!-- tab-nav=--end -->
 
+					<!-- profile-info -->
+					<div class="mb-6">
+						<!-- profile-info -->
+						<div class="flex mb-4 items-center gap-7 flex-wrap xl:flex-nowrap">
+							<!-- profile-img -->
+							<div class="relative w-43.5 h-43.5 shrink-0">
+								<span
+									class="w-6 h-6 rounded-full border-4 border-white bg-light-green inline-block absolute right-5 top-3"></span>
+
+								<img id="profilePreview" class="w-full h-full rounded-full object-cover"
+									src="assets/imgs/profile-img.png" alt="Profile Image">
+
+								<!-- Upload Button -->
+								<label
+									class="absolute bottom-2 left-2 transform w-10 h-10 rounded-full bg-[#F4F4F4] flex items-center justify-center cursor-pointer border-[3px] border-white">
+									<input type="file" id="profileUpload" accept="image/*"
+										class="absolute w-full h-full opacity-0 cursor-pointer">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M4.00042 8.58584C3.2194 8.58584 2.58625 9.21898 2.58626 10C2.58625 10.781 3.2194 11.4142 4.00042 11.4142L8.58605 11.4142L8.58605 15.9998C8.58605 16.7808 9.21919 17.414 10.0002 17.414C10.7812 17.414 11.4144 16.7808 11.4144 15.9998L11.4144 11.4142L16 11.4142C16.781 11.4142 17.4142 10.781 17.4142 10C17.4142 9.21898 16.781 8.58583 16 8.58583L11.4144 8.58584L11.4144 4.0002C11.4144 3.21918 10.7812 2.58604 10.0002 2.58604C9.21919 2.58604 8.58605 3.21918 8.58605 4.00021L8.58605 8.58584L4.00042 8.58584Z"
+											fill="black" />
+									</svg>
+								</label>
+								<!-- upload button end -->
+							</div>
+							<!-- profile-img--end -->
+
+							<!-- profile-content -->
+							<div class="w-full">
+								<!-- header -->
+								<div class="border-b border-gray-50 pb-2.5">
+									<div class="flex justify-between items-center gap-2 mb-1.5">
+										<h2 class="fs-1 font-extrabold flex gap-2 items-center">
+											Amelia Sophia, 31
+											<span>
+												<svg width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect width="35" height="25" rx="12.5" fill="#FFF2F4" />
+													<g clip-path="url(#clip0_4744_439)">
+														<path
+															d="M17.5 14.8438C19.83 14.8438 21.7188 12.955 21.7188 10.625C21.7188 8.29505 19.83 6.40625 17.5 6.40625C15.17 6.40625 13.2812 8.29505 13.2812 10.625C13.2812 12.955 15.17 14.8438 17.5 14.8438Z"
+															stroke="#FE3279" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M17.5 14.8438V19.0625" stroke="#FE3279" stroke-linecap="round"
+															stroke-linejoin="round" />
+														<path d="M15.1562 17.1875H19.8438" stroke="#FE3279" stroke-linecap="round"
+															stroke-linejoin="round" />
+													</g>
+													<defs>
+														<clipPath id="clip0_4744_439">
+															<rect width="15" height="15" fill="white" transform="translate(10 5)" />
+														</clipPath>
+													</defs>
+												</svg>
+
+											</span>
+											<span>
+												<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_4745_608)">
+														<path
+															d="M7.32518 23.9848C6.2831 22.9427 6.97405 20.7532 6.44395 19.471C5.89346 18.1469 3.875 17.0709 3.875 15.655C3.875 14.2391 5.89346 13.1631 6.44395 11.839C6.97405 10.5579 6.2831 8.36726 7.32518 7.32518C8.36726 6.2831 10.5579 6.97405 11.839 6.44395C13.1687 5.89346 14.2391 3.875 15.655 3.875C17.0709 3.875 18.1469 5.89346 19.471 6.44395C20.7532 6.97405 22.9427 6.2831 23.9848 7.32518C25.0269 8.36726 24.336 10.5568 24.8661 11.839C25.4165 13.1687 27.435 14.2391 27.435 15.655C27.435 17.0709 25.4165 18.1469 24.8661 19.471C24.336 20.7532 25.0269 22.9427 23.9848 23.9848C22.9427 25.0269 20.7532 24.336 19.471 24.8661C18.1469 25.4165 17.0709 27.435 15.655 27.435C14.2391 27.435 13.1631 25.4165 11.839 24.8661C10.5579 24.336 8.36726 25.0269 7.32518 23.9848Z"
+															fill="url(#paint0_linear_4745_608)" stroke="url(#paint1_linear_4745_608)"
+															stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M11.3101 16.0973L13.9141 18.7544L19.9901 12.5544" stroke="#FCFCFC"
+															stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+													</g>
+													<defs>
+														<linearGradient id="paint0_linear_4745_608" x1="3.875" y1="15.655" x2="27.435" y2="15.655"
+															gradientUnits="userSpaceOnUse">
+															<stop stop-color="#0CD37F" />
+															<stop offset="1" stop-color="#009560" />
+														</linearGradient>
+														<linearGradient id="paint1_linear_4745_608" x1="3.875" y1="15.655" x2="27.435" y2="15.655"
+															gradientUnits="userSpaceOnUse">
+															<stop stop-color="#0CD37F" />
+															<stop offset="1" stop-color="#009560" />
+														</linearGradient>
+														<clipPath id="clip0_4745_608">
+															<rect width="31" height="31" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+
+											</span>
+										</h2>
+
+										<button type="button" class="px-2 rounded-sm focus:ring-1 ring-gray-50 py-2 cursor-pointer">
+											<svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M1.75 13.5C2.16421 13.5 2.5 13.8358 2.5 14.25C2.5 14.6642 2.16421 15 1.75 15C1.33579 15 1 14.6642 1 14.25C1 13.8358 1.33579 13.5 1.75 13.5Z"
+													stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M1.75 7.5C2.16421 7.5 2.5 7.83579 2.5 8.25C2.5 8.66421 2.16421 9 1.75 9C1.33579 9 1 8.66421 1 8.25C1 7.83579 1.33579 7.5 1.75 7.5Z"
+													stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M1.75 1.5C2.16421 1.5 2.5 1.83579 2.5 2.25C2.5 2.66421 2.16421 3 1.75 3C1.33579 3 1 2.66421 1 2.25C1 1.83579 1.33579 1.5 1.75 1.5Z"
+													stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+									<div class="flex justify-between items-center gap-2 flex-wrap md:flex-nowrap">
+										<p class="text-base text-black ">Barcelona , Spain</p>
+										<p class="text-base text-[#7E7E7E] ">Last Active: 1h ago</p>
+									</div>
+								</div>
+								<!-- header--end -->
+
+								<!-- profile-descriptions -->
+								<div class="block pt-2">
+									<ul class="space-y-1.5">
+										<li class="text-base text-black flex gap-4 items-start">
+											<span class="w-[22px] h-[22px] shrink-0 flex items-center justify-center">
+												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_4745_613)">
+														<path
+															d="M13.3939 16.4928C11.7398 17.4046 9.79385 17.7123 7.91902 17.3586C6.04419 17.0049 4.36841 16.014 3.20411 14.5704C2.03981 13.1269 1.46646 11.3294 1.59096 9.51305C1.71546 7.69667 2.52931 5.9854 3.88077 4.6983C5.23224 3.41119 7.02907 2.6361 8.93627 2.51753C10.8435 2.39895 12.7308 2.945 14.2465 4.05386C15.7622 5.16271 16.8028 6.75869 17.1741 8.54424C17.5455 10.3298 17.2224 12.183 16.265 13.7584L17.2912 16.6764C17.3298 16.7865 17.3354 16.9047 17.3074 17.0177C17.2794 17.1307 17.2189 17.234 17.1327 17.3161C17.0466 17.3982 16.9381 17.4558 16.8194 17.4824C16.7008 17.5091 16.5767 17.5038 16.4611 17.467L13.3939 16.4928Z"
+															stroke="black" stroke-width="1.82642" stroke-linecap="round" stroke-linejoin="round" />
+													</g>
+													<defs>
+														<clipPath id="clip0_4745_613">
+															<rect width="21" height="20" fill="white" transform="matrix(-1 0 0 1 21 0)" />
+														</clipPath>
+													</defs>
+												</svg>
+
+											</span>
+											Looking for a group of travelers to explore Paris with in March!
+										</li>
+										<li class="text-base text-black flex gap-4 items-start">
+											<span class="w-[22px] h-[22px] shrink-0 flex items-center justify-center">
+												<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_4963_726)">
+														<path
+															d="M17.1875 19.2499C18.3266 19.2499 19.25 18.3265 19.25 17.1874C19.25 16.0483 18.3266 15.1249 17.1875 15.1249C16.0484 15.1249 15.125 16.0483 15.125 17.1874C15.125 18.3265 16.0484 19.2499 17.1875 19.2499Z"
+															stroke="black" stroke-width="1.83" stroke-linecap="round" stroke-linejoin="round" />
+														<path
+															d="M6.1875 4.81238H14.4375C15.1668 4.81238 15.8663 5.10211 16.382 5.61783C16.8978 6.13356 17.1875 6.83303 17.1875 7.56238C17.1875 8.29172 16.8978 8.9912 16.382 9.50692C15.8663 10.0226 15.1668 10.3124 14.4375 10.3124H6.1875C5.27582 10.3124 4.40148 10.6745 3.75682 11.3192C3.11216 11.9639 2.75 12.8382 2.75 13.7499C2.75 14.6616 3.11216 15.5359 3.75682 16.1806C4.40148 16.8252 5.27582 17.1874 6.1875 17.1874H15.125"
+															stroke="black" stroke-width="1.83" stroke-linecap="round" stroke-linejoin="round" />
+													</g>
+													<defs>
+														<clipPath id="clip0_4963_726">
+															<rect width="22" height="22" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+
+											</span>
+											Paris, France • 12/03/2025 - 22/03/2025
+										</li>
+										<li class="text-base text-black flex gap-4 items-start">
+											<span class="w-[22px] h-[22px] shrink-0 flex items-center justify-center">
+												<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_4744_464)">
+														<path d="M8.53223 7.21875H12.4697" stroke="black" stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" />
+														<path
+															d="M18.8335 12.659L15.2529 4.51165C14.8837 4.14246 14.3829 3.93506 13.8608 3.93506C13.3387 3.93506 12.838 4.14246 12.4688 4.51165V13.7812"
+															stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path
+															d="M8.5327 13.7813V4.51177C8.1635 4.14258 7.66276 3.93518 7.14065 3.93518C6.61853 3.93518 6.1178 4.14258 5.74859 4.51177L2.16797 12.6591"
+															stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path
+															d="M5.2507 17.0624C7.06286 17.0624 8.53191 15.5934 8.53191 13.7812C8.53191 11.969 7.06286 10.4999 5.2507 10.4999C3.43853 10.4999 1.96948 11.969 1.96948 13.7812C1.96948 15.5934 3.43853 17.0624 5.2507 17.0624Z"
+															stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path
+															d="M15.75 17.0624C17.5621 17.0624 19.0312 15.5934 19.0312 13.7812C19.0312 11.969 17.5621 10.4999 15.75 10.4999C13.9378 10.4999 12.4688 11.969 12.4688 13.7812C12.4688 15.5934 13.9378 17.0624 15.75 17.0624Z"
+															stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													</g>
+													<defs>
+														<clipPath id="clip0_4744_464">
+															<rect width="20.9998" height="21" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+
+											</span>
+											Seeking: Group of 2-5 people; Ages: 20-35; For: Travel, Friendship
+										</li>
+									</ul>
+								</div>
+								<!-- profile-descriptions--end -->
+
+							</div>
+							<!-- profile-content--end -->
+
+						</div>
+						<!-- profile-info--end -->
+
+						<!-- profile-btns -->
+						<div class="flex items-center gap-3 flex-wrap xl:flex-nowrap">
+
+							<a href="" class="btn btn--primary">
+								My Travel Network
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_4755_2895)">
+											<g clip-path="url(#clip1_4755_2895)">
+												<path
+													d="M18 11.25C18.8734 11.2493 19.7349 11.4524 20.516 11.843C21.2972 12.2335 21.9765 12.8009 22.5 13.5"
+													stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M1.5 13.5C2.0235 12.8009 2.70281 12.2335 3.48398 11.843C4.26514 11.4524 5.12663 11.2493 6 11.25"
+													stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M12 17.25C14.0711 17.25 15.75 15.5711 15.75 13.5C15.75 11.4289 14.0711 9.75 12 9.75C9.92893 9.75 8.25 11.4289 8.25 13.5C8.25 15.5711 9.92893 17.25 12 17.25Z"
+													stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M6.75 20.25C7.2884 19.3364 8.0559 18.579 8.97665 18.0529C9.8974 17.5267 10.9395 17.25 12 17.25C13.0605 17.25 14.1026 17.5267 15.0233 18.0529C15.9441 18.579 16.7116 19.3364 17.25 20.25"
+													stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M15.0938 7.5C15.234 6.95678 15.5238 6.46377 15.9302 6.07697C16.3366 5.69017 16.8433 5.42508 17.3927 5.31179C17.9422 5.19851 18.5125 5.24158 19.0387 5.43611C19.5649 5.63064 20.0261 5.96883 20.3697 6.41229C20.7134 6.85574 20.9258 7.38668 20.9829 7.9448C21.04 8.50293 20.9394 9.06587 20.6926 9.56971C20.4458 10.0735 20.0627 10.4981 19.5867 10.7951C19.1108 11.0921 18.561 11.2497 18 11.25"
+													stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M6.0002 11.25C5.43916 11.2497 4.88945 11.0921 4.41348 10.7951C3.93752 10.4981 3.55438 10.0735 3.30758 9.56971C3.06077 9.06587 2.9602 8.50293 3.01728 7.9448C3.07435 7.38668 3.28679 6.85574 3.63047 6.41229C3.97414 5.96883 4.43528 5.63064 4.96151 5.43611C5.48774 5.24158 6.05798 5.19851 6.60746 5.31179C7.15694 5.42508 7.66365 5.69017 8.07003 6.07697C8.47641 6.46377 8.76619 6.95678 8.90645 7.5"
+													stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+											</g>
+										</g>
+										<defs>
+											<clipPath id="clip0_4755_2895">
+												<rect width="24" height="24" fill="white" />
+											</clipPath>
+											<clipPath id="clip1_4755_2895">
+												<rect width="24" height="24" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+
+								</span>
+							</a>
+
+							<a href="" class="btn btn-outline hover:bg-[#E11D48]">
+								Like
+								<span>
+									<svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.25 17.8824L18.9826 9.70325C19.7941 8.857 20.25 7.70924 20.25 6.51246C20.25 5.31568 19.7941 4.16792 18.9826 3.32167C18.1711 2.47542 17.0704 2 15.9228 2C14.7751 2 13.6745 2.47542 12.863 3.32167L11.25 4.88819L9.63703 3.32167C8.82551 2.47542 7.72487 2 6.57722 2C5.42957 2 4.32892 2.47542 3.51741 3.32167C2.7059 4.16792 2.25 5.31568 2.25 6.51246C2.25 7.70924 2.7059 8.857 3.51741 9.70325L11.25 17.8824Z"
+											stroke="#FF8777" stroke-width="1.90476" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+
+								</span>
+							</a>
+
+							<a href="" class="btn btn-outline hover:bg-[#1E40AF]">
+								Message
+								<span>
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_4755_2878)">
+											<path
+												d="M5.36759 17.3231C7.20549 18.3868 9.36751 18.7458 11.4506 18.3332C13.5336 17.9206 15.3955 16.7644 16.6891 15.0803C17.9827 13.3962 18.6197 11.2991 18.4814 9.18002C18.3431 7.06092 17.4388 5.06444 15.9373 3.56282C14.4357 2.0612 12.4393 1.15693 10.3203 1.01859C8.20132 0.880263 6.10432 1.51732 4.4203 2.81098C2.73629 4.10464 1.58019 5.96662 1.16756 8.04975C0.754929 10.1329 1.11393 12.295 2.17763 14.133L1.03745 17.5373C0.994606 17.6658 0.988388 17.8036 1.01949 17.9354C1.0506 18.0672 1.1178 18.1878 1.21356 18.2836C1.30932 18.3793 1.42986 18.4465 1.56166 18.4776C1.69347 18.5087 1.83133 18.5025 1.9598 18.4597L5.36759 17.3231Z"
+												stroke="#759CFF" stroke-width="1.90085" stroke-linecap="round" stroke-linejoin="round" />
+										</g>
+										<defs>
+											<clipPath id="clip0_4755_2878">
+												<rect width="20" height="20" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+
+								</span>
+							</a>
+
+							<a href="" class="btn btn-outline hover:bg-[#F97316]">
+								Favorite
+								<span>
+									<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_4755_2883)">
+											<path
+												d="M10.7473 15.3571L15.5475 18.309C15.672 18.3846 15.8162 18.4216 15.9617 18.4153C16.1073 18.409 16.2477 18.3597 16.3653 18.2736C16.4828 18.1875 16.5722 18.0685 16.6221 17.9316C16.672 17.7947 16.6803 17.6461 16.6458 17.5046L15.3404 11.9965L19.6125 8.31212C19.7215 8.21648 19.8 8.09103 19.8384 7.95127C19.8769 7.8115 19.8735 7.66354 19.8288 7.52565C19.7842 7.38776 19.7001 7.26597 19.587 7.17533C19.4738 7.08468 19.3367 7.02914 19.1923 7.01558L13.586 6.55942L11.4263 1.33115C11.3712 1.19626 11.2772 1.08084 11.1563 0.999583C11.0354 0.918332 10.893 0.874939 10.7473 0.874939C10.6016 0.874939 10.4592 0.918332 10.3383 0.999583C10.2174 1.08084 10.1234 1.19626 10.0683 1.33115L7.90857 6.55942L2.30222 7.01558C2.15692 7.02833 2.0186 7.08362 1.90455 7.17454C1.79049 7.26546 1.70575 7.38797 1.66092 7.52676C1.61609 7.66556 1.61316 7.81449 1.65248 7.95495C1.6918 8.09541 1.77165 8.22116 1.88203 8.3165L6.15412 12.0009L4.84881 17.5046C4.8143 17.6461 4.82253 17.7947 4.87246 17.9316C4.92238 18.0685 5.01176 18.1875 5.1293 18.2736C5.24685 18.3597 5.38727 18.409 5.53283 18.4153C5.67839 18.4216 5.82255 18.3846 5.9471 18.309L10.7473 15.3571Z"
+												stroke="#FFD600" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+										</g>
+										<defs>
+											<clipPath id="clip0_4755_2883">
+												<rect width="20" height="20" fill="white" transform="translate(0.75)" />
+											</clipPath>
+										</defs>
+									</svg>
+
+								</span>
+							</a>
+
+							<a href="" class="btn btn-outline hover:bg-[#EF4444]">
+								Report
+								<span>
+									<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_4755_2888)">
+											<path
+												d="M3.07529 17.9247C2.14644 16.9959 2.76231 15.0443 2.28981 13.9014C1.79913 12.7212 0 11.762 0 10.5C0 9.23798 1.79913 8.27885 2.28981 7.09861C2.76231 5.95673 2.14644 4.00413 3.07529 3.07529C4.00413 2.14644 5.95673 2.76231 7.09861 2.28981C8.28389 1.79913 9.23798 0 10.5 0C11.762 0 12.7212 1.79913 13.9014 2.28981C15.0443 2.76231 16.9959 2.14644 17.9247 3.07529C18.8536 4.00413 18.2377 5.95572 18.7102 7.09861C19.2009 8.28389 21 9.23798 21 10.5C21 11.762 19.2009 12.7212 18.7102 13.9014C18.2377 15.0443 18.8536 16.9959 17.9247 17.9247C16.9959 18.8536 15.0443 18.2377 13.9014 18.7102C12.7212 19.2009 11.762 21 10.5 21C9.23798 21 8.27885 19.2009 7.09861 18.7102C5.95673 18.2377 4.00413 18.8536 3.07529 17.9247Z"
+												fill="#A8A8A8" />
+											<path d="M10.7 7V11.5938" stroke="white" stroke-width="1.25" stroke-linecap="round"
+												stroke-linejoin="round" />
+											<path
+												d="M10.6843 15.5312C11.228 15.5312 11.6687 15.0905 11.6687 14.5469C11.6687 14.0032 11.228 13.5625 10.6843 13.5625C10.1407 13.5625 9.69995 14.0032 9.69995 14.5469C9.69995 15.0905 10.1407 15.5312 10.6843 15.5312Z"
+												fill="white" />
+										</g>
+										<defs>
+											<clipPath id="clip0_4755_2888">
+												<rect width="21" height="21" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+
+								</span>
+							</a>
+
+						</div>
+						<!-- profile-btns--end -->
+					</div>
+					<!-- profile-info--end -->
+
 
 
 				</div>
@@ -492,9 +813,11 @@
 
 
 				<!-- widget-area -->
-				<div class="widget shrink-0 w-81 space-y-4">
+				<div class="widget w-full xl:shrink-0 xl:w-81 space-y-4">
+
+					<!-- widget item 1 -->
 					<div class="widget__items__wrap w-full p-[14px] rounded-2xl bg-white">
-						<div class="widget__items flex items-center justify-between">
+						<div class="widget__items__head flex items-center justify-between gap-4">
 							<div class="space-y-3">
 								<div class="inline-flex items-center">
 									<span class="icon">
@@ -515,32 +838,223 @@
 										</svg>
 									</span>
 									<span class="divider w-[1px] h-5 inline-block bg-[#E4E4E4] mx-3"></span>
-									<h3 class="font-semibold capitalize">Travel Match</h3>
+									<h3 class="font-semibold capitalize text-base">Travel Match</h3>
 								</div>
 
 								<p class="text-xs font-light capitalize">Match with the profile</p>
 							</div>
 
 							<div class="progress w-20 h-20 relative">
-								<svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 89 89" fill="none">
-									<path
-										d="M44.5 5.5C66.0391 5.5 83.5 22.9609 83.5 44.5C83.5 66.0391 66.0391 83.5 44.5 83.5C22.9609 83.5 5.5 66.0391 5.5 44.5C5.5 33.8432 9.77433 24.1846 16.7021 17.1453"
-										stroke="url(#paint0_linear_4744_511)" stroke-width="10" stroke-linecap="round"
-										stroke-linejoin="round" />
-									<defs>
-										<linearGradient id="paint0_linear_4744_511" x1="21.266" y1="12.9681" x2="65.6596" y2="76.8617"
-											gradientUnits="userSpaceOnUse">
-											<stop stop-color="#0CD17E" />
-											<stop offset="1" stop-color="#019B63" />
-										</linearGradient>
-									</defs>
-								</svg>
-
-								<span
-									class="text-green font-poppins text-3xl font-extrabold absolute top-1/2 left-1/2 transform -translate-1/2">95</span>
+								<div class="circle-progressbar">
+									<div class="circle-progressbar__wrap relative">
+										<div id="progress-circle">
+											<span
+												class="progress-percentage absolute top-1/2 left-1/2 transform -translate-1/2 font-extrabold text-[28px] text-green"></span>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
+
+					<!-- widget item 2 -->
+					<div class="widget__items__wrap w-full p-[14px] rounded-2xl bg-white">
+						<div class="widget__items__head flex items-center justify-between gap-4 mb-6">
+							<div class="space-y-3">
+								<div class="inline-flex items-center">
+									<span class="icon">
+										<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_4744_533)">
+												<path
+													d="M4.95108 15.1339C4.3376 14.5204 4.74436 13.2314 4.43229 12.4766C4.10821 11.6971 2.91992 11.0636 2.91992 10.23C2.91992 9.39651 4.10821 8.76302 4.43229 7.9835C4.74436 7.22932 4.3376 5.93968 4.95108 5.3262C5.56456 4.71272 6.8542 5.11948 7.60838 4.80741C8.39124 4.48333 9.02139 3.29504 9.85492 3.29504C10.6885 3.29504 11.3219 4.48333 12.1015 4.80741C12.8563 5.11948 14.1453 4.71272 14.7588 5.3262C15.3722 5.93968 14.9655 7.22866 15.2776 7.9835C15.6016 8.76636 16.7899 9.39651 16.7899 10.23C16.7899 11.0636 15.6016 11.6971 15.2776 12.4766C14.9655 13.2314 15.3722 14.5204 14.7588 15.1339C14.1453 15.7474 12.8563 15.3406 12.1015 15.6527C11.3219 15.9768 10.6885 17.165 9.85492 17.165C9.02139 17.165 8.3879 15.9768 7.60838 15.6527C6.8542 15.3406 5.56456 15.7474 4.95108 15.1339Z"
+													stroke="black" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M7.29883 10.4907L8.83183 12.055L12.4088 8.40503" stroke="black" stroke-width="1.46"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</g>
+											<defs>
+												<clipPath id="clip0_4744_533">
+													<rect width="18.25" height="18.25" fill="white" transform="translate(0 0.375)" />
+												</clipPath>
+											</defs>
+										</svg>
+									</span>
+									<span class="divider w-[1px] h-5 inline-block bg-[#E4E4E4] mx-3"></span>
+									<h3 class="font-semibold capitalize text-base">Verification</h3>
+								</div>
+
+								<p class="text-xs font-light capitalize">Verified users receive more attention!</p>
+							</div>
+						</div>
+
+						<div class="verification-wrap flex justify-between gap-[14px]">
+							<div class="verification-item flex-1 text-center group verified">
+								<div
+									class="verification-box rounded-[10px] bg-[#FAFAFA] flex items-center justify-center aspect-square relative mb-2.5">
+									<div class="icon">
+										<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_4744_544)">
+												<path
+													d="M25.7628 3.82202H11.8306C10.5482 3.82202 9.50854 4.86163 9.50854 6.14406V31.6864C9.50854 32.9689 10.5482 34.0085 11.8306 34.0085H25.7628C27.0452 34.0085 28.0848 32.9689 28.0848 31.6864V6.14406C28.0848 4.86163 27.0452 3.82202 25.7628 3.82202Z"
+													stroke="black" stroke-width="2.32203" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M9.50854 8.46606H28.0848" stroke="black" stroke-width="2.32203" stroke-linecap="round"
+													stroke-linejoin="round" />
+												<path d="M9.50854 29.3645H28.0848" stroke="black" stroke-width="2.32203" stroke-linecap="round"
+													stroke-linejoin="round" />
+											</g>
+											<defs>
+												<clipPath id="clip0_4744_544">
+													<rect width="37.1525" height="37.1525" fill="white"
+														transform="translate(0.220459 0.338989)" />
+												</clipPath>
+											</defs>
+										</svg>
+									</div>
+
+									<span
+										class="verification-iocn w-6 h-6 rounded-full inline-flex items-center justify-center bg-[#D2D6D3] absolute -top-2 -right-2 group-[.verified]:bg-green">
+										<svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1.74023 6.01034L4.74023 9.07157L11.7402 1.92871" fill="#0000" />
+											<path d="M1.74023 6.01034L4.74023 9.07157L11.7402 1.92871" stroke="black" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span>
+								</div>
+
+								<p class="font-semibold text-sm">Phone</p>
+							</div>
+							<div class="verification-item flex-1 text-center group verified">
+								<div
+									class="verification-box rounded-[10px] bg-[#FAFAFA] flex items-center justify-center aspect-square relative mb-2.5">
+									<div class="icon">
+										<svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_4744_553)">
+												<path d="M21.8447 15.7094H27.3596" stroke="black" stroke-width="2.20593" stroke-linecap="round"
+													stroke-linejoin="round" />
+												<path d="M21.8447 20.1212H27.3596" stroke="black" stroke-width="2.20593" stroke-linecap="round"
+													stroke-linejoin="round" />
+												<path
+													d="M30.6685 6.88562H6.40326C5.79411 6.88562 5.30029 7.37943 5.30029 7.98859V27.842C5.30029 28.4511 5.79411 28.9449 6.40326 28.9449H30.6685C31.2777 28.9449 31.7715 28.4511 31.7715 27.842V7.98859C31.7715 7.37943 31.2777 6.88562 30.6685 6.88562Z"
+													stroke="black" stroke-width="2.20593" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M14.1236 20.1212C15.951 20.1212 17.4325 18.6398 17.4325 16.8123C17.4325 14.9849 15.951 13.5034 14.1236 13.5034C12.2961 13.5034 10.8147 14.9849 10.8147 16.8123C10.8147 18.6398 12.2961 20.1212 14.1236 20.1212Z"
+													stroke="black" stroke-width="2.20593" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M9.71216 23.4301C10.2016 21.5275 12.0684 20.1212 14.124 20.1212C16.1797 20.1212 18.0478 21.5261 18.5359 23.4301"
+													stroke="black" stroke-width="2.20593" stroke-linecap="round" stroke-linejoin="round" />
+											</g>
+											<defs>
+												<clipPath id="clip0_4744_553">
+													<rect width="35.2949" height="35.2949" fill="white"
+														transform="translate(0.887939 0.267822)" />
+												</clipPath>
+											</defs>
+										</svg>
+									</div>
+
+									<span
+										class="verification-iocn w-6 h-6 rounded-full inline-flex items-center justify-center bg-[#D2D6D3] absolute -top-2 -right-2 group-[.verified]:bg-green">
+										<svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1.74023 6.01034L4.74023 9.07157L11.7402 1.92871" fill="#0000" />
+											<path d="M1.74023 6.01034L4.74023 9.07157L11.7402 1.92871" stroke="black" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span>
+								</div>
+
+								<p class="font-semibold text-sm">ID</p>
+							</div>
+							<div class="verification-item flex-1 text-center group">
+								<div
+									class="verification-box rounded-[10px] bg-[#FAFAFA] flex items-center justify-center aspect-square relative mb-2.5">
+									<div class="icon">
+										<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_4744_564)">
+												<path
+													d="M17.1323 22.2111C20.0177 22.2111 22.3569 19.872 22.3569 16.9865C22.3569 14.1011 20.0177 11.762 17.1323 11.762C14.2468 11.762 11.9077 14.1011 11.9077 16.9865C11.9077 19.872 14.2468 22.2111 17.1323 22.2111Z"
+													stroke="black" stroke-width="2.08983" stroke-linecap="round" stroke-linejoin="round" />
+												<path
+													d="M24.4467 27.4357C22.46 28.7562 19.6962 29.5255 17.1323 29.5255C14.6523 29.5255 12.228 28.7901 10.166 27.4123C8.10394 26.0345 6.49679 24.0762 5.54774 21.785C4.59869 19.4938 4.35038 16.9726 4.8342 14.5403C5.31802 12.1079 6.51224 9.87371 8.26585 8.1201C10.0195 6.36649 12.2537 5.17227 14.686 4.68845C17.1183 4.20463 19.6395 4.45294 21.9307 5.40199C24.2219 6.35103 26.1802 7.95819 27.558 10.0202C28.9358 12.0822 29.6712 14.5065 29.6712 16.9865C29.6712 19.8718 28.6263 22.2111 26.014 22.2111C23.4017 22.2111 22.3568 19.8718 22.3568 16.9865V11.7619"
+													stroke="black" stroke-width="2.08983" stroke-linecap="round" stroke-linejoin="round" />
+											</g>
+											<defs>
+												<clipPath id="clip0_4744_564">
+													<rect width="33.4373" height="33.4373" fill="white"
+														transform="translate(0.413574 0.267822)" />
+												</clipPath>
+											</defs>
+										</svg>
+									</div>
+
+									<span
+										class="verification-iocn w-6 h-6 rounded-full inline-flex items-center justify-center bg-[#D2D6D3] absolute -top-2 -right-2 group-[.verified]:bg-green">
+										<svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1.74023 6.01034L4.74023 9.07157L11.7402 1.92871" fill="#0000" />
+											<path d="M1.74023 6.01034L4.74023 9.07157L11.7402 1.92871" stroke="black" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span>
+								</div>
+
+								<p class="font-semibold text-sm">Email</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- widget item 3 -->
+					<div class="widget__items__wrap w-full p-[14px] rounded-2xl bg-white">
+						<div class="widget__items__head flex items-center justify-between gap-4 mb-4.5">
+							<div class="space-y-3">
+								<div class="inline-flex items-center">
+									<h3 class="font-semibold capitalize text-base">Find Travelers Who Share <br>Your Passions</h3>
+								</div>
+							</div>
+						</div>
+
+						<a href="#" class="btn btn--primary w-full !font-bold !justify-between !rounded-[10px]">
+							Take a quick survey!
+							<span class="icon" aria-hidden="true">
+								<img src="assets/imgs/icons/btn-checkbook.svg" alt="icon">
+							</span>
+						</a>
+					</div>
+
+					<!-- widget item 4 -->
+					<div class="widget__items__wrap w-full p-[14px] rounded-2xl bg-white">
+						<div class="widget__items__head flex items-center justify-between gap-4">
+							<div class="space-y-3">
+								<div class="inline-flex items-center">
+									<h3 class="font-semibold capitalize text-base">Help Us Improve</h3>
+								</div>
+							</div>
+
+							<div class="icon">
+								<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4884_253)">
+										<path
+											d="M13.7107 23.4678C19.2156 23.4678 23.6782 19.0052 23.6782 13.5003C23.6782 7.99538 19.2156 3.53278 13.7107 3.53278C8.20577 3.53278 3.74316 7.99538 3.74316 13.5003C3.74316 19.0052 8.20577 23.4678 13.7107 23.4678Z"
+											stroke="black" stroke-width="1.66125" stroke-linecap="round" stroke-linejoin="round" />
+										<path
+											d="M13.7107 17.6534C16.0045 17.6534 17.8639 15.7939 17.8639 13.5002C17.8639 11.2065 16.0045 9.34711 13.7107 9.34711C11.417 9.34711 9.55762 11.2065 9.55762 13.5002C9.55762 15.7939 11.417 17.6534 13.7107 17.6534Z"
+											stroke="black" stroke-width="1.66125" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M10.7747 10.564L6.66309 6.45245" stroke="black" stroke-width="1.66125"
+											stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M16.6475 10.564L20.7591 6.45245" stroke="black" stroke-width="1.66125"
+											stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M16.6475 16.4365L20.7591 20.5481" stroke="black" stroke-width="1.66125"
+											stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M10.7747 16.4365L6.66309 20.5481" stroke="black" stroke-width="1.66125"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4884_253">
+											<rect width="26.58" height="26.58" fill="white" transform="translate(0.419922 0.210022)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</div>
+
 				</div>
 				<!-- widget-area--end -->
 
@@ -554,8 +1068,23 @@
 
 
 	<!-- JS Scripts -->
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<script src="assets/js/circle-progress.min.js"></script>
+	<script src="assets/js/plugin.js"></script>
 	<script src="assets/js/script.js"></script>
-
+	<script>
+		// profile-image uploader font profile page
+		document.getElementById('profileUpload').addEventListener('change', function (event) {
+			const file = event.target.files[0];
+			if (file) {
+				const reader = new FileReader();
+				reader.onload = function (e) {
+					document.getElementById('profilePreview').src = e.target.result;
+				};
+				reader.readAsDataURL(file);
+			}
+		});
+	</script>
 </body>
 
 </html>
