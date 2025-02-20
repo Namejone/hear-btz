@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: 'Avenir LT Pro';
-  src: url('AvenirLTPro-Book.woff2') format('woff2'),
-    url('AvenirLTPro-Book.woff') format('woff');
+  src: url('../fonts/AvenirLTPro-Book.woff2') format('woff2'),
+    url('../fonts/AvenirLTPro-Book.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,8 +13,8 @@
 
 @font-face {
   font-family: 'Avenir LT Pro';
-  src: url('AvenirLTPro-Black.woff2') format('woff2'),
-    url('AvenirLTPro-Black.woff') format('woff');
+  src: url('../fonts/AvenirLTPro-Black.woff2') format('woff2'),
+    url('../fonts/AvenirLTPro-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -22,8 +22,8 @@
 
 @font-face {
   font-family: 'Avenir LT Pro';
-  src: url('AvenirLTPro-Roman.woff2') format('woff2'),
-    url('AvenirLTPro-Roman.woff') format('woff');
+  src: url('../fonts/AvenirLTPro-Roman.woff2') format('woff2'),
+    url('../fonts/AvenirLTPro-Roman.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -31,8 +31,8 @@
 
 @font-face {
   font-family: 'Avenir LT Pro';
-  src: url('AvenirLTPro-Light.woff2') format('woff2'),
-    url('AvenirLTPro-Light.woff') format('woff');
+  src: url('../fonts/AvenirLTPro-Light.woff2') format('woff2'),
+    url('../fonts/AvenirLTPro-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -40,8 +40,8 @@
 
 @font-face {
   font-family: 'Avenir LT Pro';
-  src: url('AvenirLTPro-Medium.woff2') format('woff2'),
-    url('AvenirLTPro-Medium.woff') format('woff');
+  src: url('../fonts/AvenirLTPro-Medium.woff2') format('woff2'),
+    url('../fonts/AvenirLTPro-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -49,8 +49,8 @@
 
 @font-face {
   font-family: 'Avenir LT Pro';
-  src: url('AvenirLTPro-Heavy.woff2') format('woff2'),
-    url('AvenirLTPro-Heavy.woff') format('woff');
+  src: url('../fonts/AvenirLTPro-Heavy.woff2') format('woff2'),
+    url('../fonts/AvenirLTPro-Heavy.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -125,23 +125,29 @@
   .scrollbar-hidden::-webkit-scrollbar {
     display: none;
   }
+
   .btn {
-    @apply py-[13px] px-6.25 text-[15px] inline-flex items-center justify-center gap-2 rounded-[100px] cursor-pointer text-white capitalize transition-all duration-500 ease-in-out hover:bg-[#009560] hover:bg-[center_right];
+    @apply py-[13px] px-6.25 text-[15px] inline-flex items-center justify-center font-semibold gap-2 rounded-[100px] text-white cursor-pointer capitalize bg-[200%_auto] bg-[center_right] transition-all duration-500 ease-in-out hover:bg-[#009560] hover:bg-[left_center];
   }
   .btn-outline {
     @apply border border-gray-50 rounded-4xl text-black/60 font-semibold text-[15px]  hover:bg-green hover:text-white transition-all duration-300;
   }
   .btn--primary {
-    @apply bg-[200%_auto] bg-[linear-gradient(165deg,_#fe3279_0%,_#ffce76_60%,_#fe3279_100%)] hover:bg-[linear-gradient(145deg,_#fe3279_0%,_#ffce76_40%,_#fe3279_100%)];
+    @apply bg-[linear-gradient(160deg,_#ffce76_0%,_#fe3279_40%,_#ffce76_100%)];
   }
   .btn--secondary {
-    @apply bg-[200%_auto] bg-gradient-to-r from-[#0cd37f] via-[#009560] to-[#0cd37f];
+    @apply bg-gradient-to-r from-[#009560] via-[#0cd37f] to-[#009560];
   }
   .fs-1 {
     @apply text-[25px] font-bold leading-[31px] text-black;
   }
   .fs-2 {
     @apply text-[22px] font-semibold leading-[27px] text-black;
+  }
+
+  /* tags */
+  .tag {
+    @apply py-2.5 px-3.5 rounded-4xl font-extrabold text-black text-sm leading-[23px] inline-block;
   }
 }
 /* ===== Customized components CSS End ===== */
@@ -185,4 +191,22 @@
 /* ===== Customized utilities CSS End ===== */
 
 /* ===== Custom CSS Start ===== */
+
+/* aside css start */
+.aside__nav__item svg {
+  @apply w-6.5 transition-all duration-500 ease-in-out;
+}
+.aside__nav__item.active .aside__nav__link svg,
+.aside__nav__item:hover .aside__nav__link svg {
+  @apply transform scale-[.8];
+}
+.aside__nav__link path {
+  @apply stroke-black transition-all duration-500 ease-in-out;
+}
+.aside__nav__item.active .aside__nav__link path,
+.aside__nav__item:hover .aside__nav__link path {
+  @apply stroke-white;
+}
+/* aside css end */
+
 /* ===== Custom CSS End ===== */
