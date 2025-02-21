@@ -187,6 +187,34 @@
       rgba(1, 188, 42, 0.1) 100%
     );
   }
+
+  /* Scrollbar width */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Scrollbar track */
+  .scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  /* Scrollbar handle */
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Scrollbar handle on hover */
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 /* ===== Customized utilities CSS End ===== */
 
@@ -208,5 +236,20 @@
   @apply stroke-white;
 }
 /* aside css end */
+
+/* custom-scroll-bar */
+.os-scrollbar {
+  @apply -end-0.5;
+}
+.os-theme-dark > .os-scrollbar > .os-scrollbar-track {
+  @apply bg-gray-50;
+}
+.os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  @apply bg-gradient-to-b from-[#fe3279] to-[#ffce76];
+}
+.os-scrollbar-horizontal {
+  display: none !important;
+}
+/* custom-scroll-bar--end */
 
 /* ===== Custom CSS End ===== */

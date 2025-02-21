@@ -22,3 +22,7 @@ document.addEventListener('click', (event) => {
     sidebar.classList.remove('left-0')
   }
 })
+
+OverlayScrollbars(document.getElementById('custom-scrollbar'), {
+  x: 'hidden',
+})
